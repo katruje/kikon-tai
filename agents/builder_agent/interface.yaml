@@ -1,0 +1,19 @@
+id: builder_agent
+name: Builder Agent
+description: >
+  Interprets implementation-phase tasks and generates agent scaffolds or module directories
+  in the designated project. Used to bootstrap new components like resume_adapter_agent in career-agent.
+
+inputs:
+  - type: task
+    description: High-level implementation task from the backlog (e.g. "Implement Phase 1")
+
+outputs:
+  - type: file_scaffold
+    description: Folder and file structure created in the appropriate external project
+
+dependencies: []
+
+triggers:
+  - type: task
+    description: Triggered by tasks assigned to builder_agent

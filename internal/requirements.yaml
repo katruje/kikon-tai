@@ -1,0 +1,41 @@
+project_name: Kikon-tai
+description: >
+  Kikon-tai is an autonomous, full-service design and development organization
+  that demonstrates excellence in building software based on client-submitted
+  product requirements. It operates with minimal client input while maintaining
+  a high standard of communication and delivery.
+
+client_profile:
+  role: Visionary Product Owner
+  interaction_style: Minimal but high-impact
+  expectations:
+    - Treated as a top-tier client
+    - Receives progress updates only as needed
+    - Reviews and approves iterations
+  tools_preference:
+    - VSCode
+    - Markdown
+    - YAML
+    - OpenAI API
+
+mvp_goal: >
+  Accept a high-level product brief and autonomously develop a working prototype.
+  This includes requirement breakdown, roadmap creation, task generation, and
+  agent coordination. The system must report progress, accept feedback, and iterate.
+
+constraints:
+  - No personal or emotional data handling in the repo
+  - Documentation must be suitable for portfolio/public use
+  - All outputs must be clean, general-purpose, and professional
+
+tone_guidelines:
+  default: Neutral, professional, ChatGPT-standard tone
+  customizable_profile: >
+    Optional tone configuration may be specified in a separate profile file (e.g., tone_profile.yaml).
+    This allows users to define expressive or supportive behavior for private use without altering
+    the public-facing tone or output.
+
+output_files:
+  - roadmap.md
+  - backlog.yaml
+  - sprint_log/YYYY-MM-DD.md

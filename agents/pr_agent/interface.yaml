@@ -1,0 +1,28 @@
+id: pr_agent
+name: Pull Request Agent
+description: |
+  Creates a new branch, commits staged changes, pushes to GitHub, and opens a pull request
+  assigned to the configured user for manual review.
+
+inputs:
+  - name: branch_name
+    type: string
+    description: Name of the new Git branch
+  - name: commit_message
+    type: string
+    description: Git commit message
+  - name: pr_title
+    type: string
+    description: Title of the pull request
+  - name: pr_body
+    type: string
+    description: Body/description of the pull request
+
+outputs:
+  - name: pr_url
+    type: string
+    description: URL to the created pull request
+
+flags:
+  requires_github_token: true
+  auto_assign_reviewer: true

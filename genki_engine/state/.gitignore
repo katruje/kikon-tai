@@ -1,0 +1,2 @@
+# Ignore runtime state files (IDs, status flags, counters)
+*.yaml

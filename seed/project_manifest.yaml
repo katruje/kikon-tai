@@ -1,0 +1,20 @@
+# Optional: manifest for multi-module or nested builds
+project:
+  id: PROJECT_ID
+  name: project-name
+  codename: Codename
+  description: >
+    A single paragraph summary of what this project/module is for.
+  output_path: ../project-name
+  status: proposed
+
+agents:
+  - name: agent_1
+    role: short description
+  - name: agent_2
+    role: short description
+
+includes:
+  - data/backlog.yaml
+  - roadmap.md
+  - client_portal/briefs/project-name.md

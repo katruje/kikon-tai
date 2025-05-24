@@ -1,0 +1,36 @@
+
+
+agent_name: interviewer_agent
+description: >
+  The interviewer_agent is responsible for engaging the client to extract clear,
+  actionable, and structured requirements for any project. It transforms high-level
+  visions into detailed YAML specifications suitable for autonomous planning.
+
+inputs:
+  - client_prompt: >
+      The initial product vision, goals, or desires expressed by the client in natural language.
+  - followup_questions: >
+      A predefined or adaptive list of questions to refine unclear or incomplete inputs.
+
+outputs:
+  - requirements_yaml: >
+      A structured YAML file capturing the project's name, description, client goals,
+      constraints, and tone guidelines.
+  - summary_md: >
+      A human-readable Markdown summary of the requirements for quick reference.
+
+behavior:
+  - Use respectful, client-centric language.
+  - Ask clarifying questions when input is vague or underspecified.
+  - Ensure all necessary fields in the requirements schema are populated or noted as pending.
+  - Validate tone and usage expectations based on public vs. private use.
+
+triggers:
+  - Manual: Activated when client submits a new brief.
+  - Scheduled (optional): Daily prompt if no new input has been received within a defined window.
+
+dependencies:
+  - role_configs.yaml
+  - requirements.yaml schema (shared spec)
+
+status: draft

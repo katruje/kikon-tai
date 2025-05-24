@@ -1,0 +1,35 @@
+agent_name: sync_agent
+description: >
+  The sync_agent is responsible for monitoring project state and producing regular
+  summary reports. It acts as the status reflection mechanism for Kikon-tai,
+  communicating progress, risks, and upcoming work to the client or project manager.
+
+inputs:
+  - backlog_yaml: >
+      The current task backlog with status and assignments.
+  - requirements_yaml: >
+      High-level goals for context and alignment checking.
+  - roadmap_md: >
+      For referencing current phase and milestones.
+
+outputs:
+  - sprint_log_md: >
+      A dated Markdown file containing a summary of current progress, recent actions,
+      outstanding tasks, and any identified blockers.
+
+behavior:
+  - Review current phase and tasks.
+  - Report completed, in-progress, and blocked items.
+  - Provide a concise summary and optionally a motivational or reflective note.
+  - Flag inconsistencies or scope drift against the original requirements.
+
+triggers:
+  - Manual: On request by client or project_manager
+  - Scheduled: Daily or at defined intervals via genki_engine
+
+dependencies:
+  - backlog_agent
+  - roadmap_agent
+  - role_configs.yaml
+
+status: draft

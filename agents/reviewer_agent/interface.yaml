@@ -1,0 +1,21 @@
+id: reviewer_agent
+name: Reviewer Agent
+description: >
+  Reviews generated code for correctness, completeness, and adherence to naming and structural conventions.
+  Performs static inspection of project directories and files, with optional summary output or backlog updates.
+
+inputs:
+  - type: project_path
+    description: Path to the target project for inspection (e.g. career-agent)
+
+outputs:
+  - type: report
+    description: Structured findings or summary log of agent/code structure
+
+dependencies: []
+
+triggers:
+  - type: manual
+    description: Triggered explicitly or via a meta-task
+  - type: post_generation
+    description: Invoked after builder_agent completes scaffolding

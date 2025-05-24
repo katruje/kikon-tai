@@ -1,0 +1,19 @@
+id: project_manager_agent
+name: Project Manager Agent
+description: >
+  Responsible for analyzing the backlog, organizing tasks by priority or dependency,
+  and preparing execution plans or sprints. May also delegate tasks to other agents.
+
+inputs:
+  - type: backlog
+    description: Full task backlog loaded from backlog.yaml
+
+outputs:
+  - type: planning_log
+    description: Printed output or future structured sprint plan (TBD)
+
+dependencies: []
+
+triggers:
+  - type: manual
+  - type: backlog_updated

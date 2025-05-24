@@ -1,0 +1,93 @@
+backlog:
+  - id: T001
+    title: Design agent interface contracts
+    phase: Phase 2
+    assigned_to: project_manager
+    priority: high
+    status: done
+
+  - id: T002
+    title: Create interface spec for interviewer_agent
+    phase: Phase 2
+    assigned_to: project_manager
+    priority: high
+    status: done
+
+  - id: T003
+    title: Create interface spec for roadmap_agent
+    phase: Phase 2
+    assigned_to: project_manager
+    priority: high
+    status: done
+
+  - id: T004
+    title: Create interface spec for backlog_agent
+    phase: Phase 2
+    assigned_to: project_manager
+    priority: high
+    status: done
+
+  - id: T005
+    title: Create interface spec for sync_agent
+    phase: Phase 2
+    assigned_to: project_manager
+    priority: high
+    status: done
+
+  - id: T013
+    title: Review scaffolded agents in career-agent project
+    phase: Phase 3
+    assigned_to: reviewer_agent
+    priority: medium
+    status: pending
+
+  - id: T006
+    title: Implement interviewer_agent logic
+    phase: Phase 2
+    assigned_to: interviewer_agent
+    priority: high
+    status: pending
+
+  - id: T007
+    title: Implement roadmap_agent logic
+    phase: Phase 2
+    assigned_to: roadmap_agent
+    priority: high
+    status: pending
+
+  - id: T008
+    title: Implement backlog_agent logic
+    phase: Phase 2
+    assigned_to: backlog_agent
+    priority: high
+    status: pending
+
+  - id: T009
+    title: Implement sync_agent logic
+    phase: Phase 2
+    assigned_to: sync_agent
+    priority: high
+    status: pending
+
+  - id: T010
+    title: Configure Genki Engine loop
+    phase: Phase 2
+    assigned_to: genki_engine
+    priority: high
+    status: pending
+
+  - id: T011
+    title: Demote priority on completed meta tasks for visual clarity
+    phase: Phase 2
+    assigned_to: project_manager
+    priority: low
+    status: pending
+
+  - id: T012
+    title: Plan auto-linking fields in backlog entries (e.g. source, created_at)
+    phase: Phase 3
+    assigned_to: backlog_agent
+    priority: medium
+    status: pending
+
+  
