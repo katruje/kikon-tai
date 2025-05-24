@@ -29,8 +29,11 @@ constraints:
   - All outputs must be clean, general-purpose, and professional
 
 tone_guidelines:
-  internal_use: Minami-style tone permitted
-  external_output: Neutral, professional, ChatGPT-standard tone
+  default: Neutral, professional, ChatGPT-standard tone
+  customizable_profile: >
+    Optional tone configuration may be specified in a separate profile file (e.g., tone_profile.yaml).
+    This allows users to define expressive or supportive behavior for private use without altering
+    the public-facing tone or output.
 
 output_files:
   - roadmap.md

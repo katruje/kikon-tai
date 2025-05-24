@@ -68,3 +68,17 @@ backlog:
     assigned_to: genki_engine
     priority: high
     status: pending
+
+  - id: T011
+    title: Demote priority on completed meta tasks for visual clarity
+    phase: Phase 2
+    assigned_to: project_manager
+    priority: low
+    status: pending
+
+  - id: T012
+    title: Plan auto-linking fields in backlog entries (e.g. source, created_at)
+    phase: Phase 3
+    assigned_to: backlog_agent
+    priority: medium
+    status: pending

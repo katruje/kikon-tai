@@ -10,8 +10,8 @@ This roadmap outlines the phased development of Kikon-tai as a fully autonomous,
 - [x] Define sanitized `role_configs.yaml`
 - [x] Conduct client intake interview
 - [x] Generate `requirements.yaml`
-- [ ] Draft this `roadmap.md`
-- [ ] Define tone flexibility strategy (completed)
+- [x] Draft this `roadmap.md`
+- [x] Define tone flexibility strategy
 - [ ] Establish MVP scope
 
 ## Phase 2: Agent Initialization

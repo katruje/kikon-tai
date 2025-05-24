@@ -1,5 +1,3 @@
-
-
 agent_name: roadmap_agent
 description: >
   The roadmap_agent is responsible for transforming structured project requirements
@@ -32,3 +30,19 @@ dependencies:
   - role_configs.yaml
 
 status: draft
+
+
+implementation_notes:
+  status: placeholder
+  handler_function: handle_roadmap_agent
+  expected_behavior_on_run:
+    - Load the client brief from `client_portal/client_brief.md`
+    - Extract project name, objective, scope, and status
+    - Generate a phased roadmap with 3–5 stages based on MVP features
+    - Output `data/roadmap.md` using standard formatting
+    - Print console status for each phase defined
+
+  next_steps:
+    - Define the roadmap phases in YAML or Markdown
+    - Create roadmap_agent.py to hold logic
+    - Add roadmap_agent to genki_engine dispatch if not already present
