@@ -1,0 +1,16 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Logs and runtime
+*.log
+
+# VSCode
+.vscode/
+
+# System files
+.DS_Store
+
+# Data/output files (optional, you can commit selectively)
+data/sprint_log/

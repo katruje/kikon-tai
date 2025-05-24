@@ -1,0 +1,70 @@
+backlog:
+  - id: T001
+    title: Design agent interface contracts
+    phase: Phase 2
+    assigned_to: project_manager
+    priority: high
+    status: done
+
+  - id: T002
+    title: Create interface spec for interviewer_agent
+    phase: Phase 2
+    assigned_to: project_manager
+    priority: high
+    status: done
+
+  - id: T003
+    title: Create interface spec for roadmap_agent
+    phase: Phase 2
+    assigned_to: project_manager
+    priority: high
+    status: done
+
+  - id: T004
+    title: Create interface spec for backlog_agent
+    phase: Phase 2
+    assigned_to: project_manager
+    priority: high
+    status: done
+
+  - id: T005
+    title: Create interface spec for sync_agent
+    phase: Phase 2
+    assigned_to: project_manager
+    priority: high
+    status: done
+
+  - id: T006
+    title: Implement interviewer_agent logic
+    phase: Phase 2
+    assigned_to: interviewer_agent
+    priority: high
+    status: pending
+
+  - id: T007
+    title: Implement roadmap_agent logic
+    phase: Phase 2
+    assigned_to: roadmap_agent
+    priority: high
+    status: pending
+
+  - id: T008
+    title: Implement backlog_agent logic
+    phase: Phase 2
+    assigned_to: backlog_agent
+    priority: high
+    status: pending
+
+  - id: T009
+    title: Implement sync_agent logic
+    phase: Phase 2
+    assigned_to: sync_agent
+    priority: high
+    status: pending
+
+  - id: T010
+    title: Configure Genki Engine loop
+    phase: Phase 2
+    assigned_to: genki_engine
+    priority: high
+    status: pending

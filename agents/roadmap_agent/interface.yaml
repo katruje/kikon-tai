@@ -1,0 +1,34 @@
+
+
+agent_name: roadmap_agent
+description: >
+  The roadmap_agent is responsible for transforming structured project requirements
+  into a phased development plan. It produces a clear, actionable roadmap that
+  can be used to guide agent coordination, backlog generation, and MVP tracking.
+
+inputs:
+  - requirements_yaml: >
+      The structured project specification created by the interviewer_agent.
+  - project_status: >
+      Optional input from sync_agent indicating progress, blockers, or scope adjustments.
+
+outputs:
+  - roadmap_md: >
+      A multi-phase Markdown file outlining the development strategy,
+      milestones, dependencies, and expected deliverables.
+
+behavior:
+  - Interpret requirements to define development phases.
+  - Prioritize tasks that enable quick feedback and iterative refinement.
+  - Flag missing or ambiguous requirements for client follow-up.
+  - Keep roadmap concise and portfolio-presentable.
+
+triggers:
+  - On update to requirements.yaml
+  - On command by the project_manager or genki_engine
+
+dependencies:
+  - requirements.yaml
+  - role_configs.yaml
+
+status: draft

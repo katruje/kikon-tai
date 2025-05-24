@@ -1,0 +1,33 @@
+
+
+agent_name: backlog_agent
+description: >
+  The backlog_agent is responsible for transforming the project roadmap into a prioritized,
+  modular backlog of actionable tasks. It ensures that each phase of development has
+  clearly scoped items for agents or developers to execute.
+
+inputs:
+  - roadmap_md: >
+      The roadmap created by roadmap_agent, containing the phased development plan.
+  - requirements_yaml: >
+      Project requirements used for context and prioritization alignment.
+
+outputs:
+  - backlog_yaml: >
+      A structured list of tasks categorized by development phase, priority, and agent role.
+
+behavior:
+  - Decompose each roadmap phase into discrete, actionable units of work.
+  - Assign agent roles or labels to each task.
+  - Identify dependencies or blocked items and mark them clearly.
+  - Maintain traceability to original requirement and roadmap sources.
+
+triggers:
+  - On update to roadmap.md
+  - On manual command by project_manager
+
+dependencies:
+  - roadmap_agent
+  - role_configs.yaml
+
+status: draft
