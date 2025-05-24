@@ -5,11 +5,8 @@ This agent reads the roadmap and converts it into a structured YAML backlog.
 It is designed to be triggered by the Genki Engine as part of Phase 2.
 """
 
-from pathlib import Path
 import yaml
-
-ROADMAP_PATH = Path("../../data/roadmap.md")
-BACKLOG_PATH = Path("../../data/backlog.yaml")
+from utils.pathing import ROADMAP_PATH, BACKLOG_PATH
 
 def handle_backlog_agent(task):
     print(f"→ [backlog_agent] Reading roadmap from {ROADMAP_PATH}")

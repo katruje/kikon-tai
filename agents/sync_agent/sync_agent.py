@@ -7,13 +7,11 @@ This agent generates a sprint log summarizing project activity. It checks the cu
 backlog for completed, in-progress, and pending tasks and writes a dated Markdown log.
 """
 
-from pathlib import Path
+from utils.pathing import BACKLOG_PATH, DATA_DIR
 from datetime import datetime
 import yaml
 
-ROOT = Path(__file__).resolve().parent.parent.parent
-BACKLOG_PATH = ROOT / "data/backlog.yaml"
-LOG_DIR = ROOT / "data/sprint_log"
+LOG_DIR = DATA_DIR / "sprint_log"
 
 def handle_sync_agent(task):
     print("→ [sync_agent] Generating sprint log from backlog.yaml")
