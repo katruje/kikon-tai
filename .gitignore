@@ -12,6 +12,6 @@ __pycache__/
 # System files
 .DS_Store
 
-# Data/output files (optional, you can commit selectively)
-data/sprint_log/.env
 .env
+# Optional: Exclude generated or runtime data
+data/sprint_log/
