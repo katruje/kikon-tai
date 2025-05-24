@@ -1,0 +1,8 @@
+# Default structure for client index
+active_projects:
+  - id: PROJECT_ID
+    name: "project-name"
+    codename: "Codename"
+    brief: "client_portal/briefs/project-name.md"
+    output_path: "../project-name"
+    status: "proposed"

@@ -1,0 +1,2 @@
+# Ignore client index (runtime state)
+client_index.yaml

@@ -1,0 +1,20 @@
+# Agent Spec Template
+id: AGENT_ID
+name: agent_name
+role: "Describe the primary responsibility of this agent."
+description: >
+  A detailed overview of what this agent is meant to do, including its boundaries and handoff points.
+
+inputs:
+  - type: input_type_1
+    source: "Where the input comes from (e.g., brief, backlog, user)"
+    description: "Description of the input format or usage"
+
+outputs:
+  - type: output_type_1
+    target: "Where the output goes (e.g., file, agent, portal)"
+    description: "Description of the expected output"
+
+dependencies:
+  - name: dependent_agent_or_file
+    reason: "Why this dependency is required"
