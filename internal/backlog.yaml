@@ -34,6 +34,13 @@ backlog:
     priority: high
     status: done
 
+  - id: T013
+    title: Review scaffolded agents in career-agent project
+    phase: Phase 3
+    assigned_to: reviewer_agent
+    priority: medium
+    status: pending
+
   - id: T006
     title: Implement interviewer_agent logic
     phase: Phase 2
@@ -82,3 +89,5 @@ backlog:
     assigned_to: backlog_agent
     priority: medium
     status: pending
+
+  

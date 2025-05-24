@@ -21,10 +21,26 @@ def load_backlog():
 
 # Agent handler functions (stubs)
 from agents.interviewer_agent.interviewer_agent import handle_interviewer_agent as interviewer_logic
+from agents.builder_agent.builder_agent import handle_builder_agent as builder_logic
+from agents.reviewer_agent.reviewer_agent import handle_reviewer_agent as reviewer_logic
 
 def handle_interviewer_agent(task):
     print(f"→ [interviewer_agent] Handling: {task['title']}")
     interviewer_logic(task)
+
+
+# Builder agent handler
+def handle_builder_agent(task):
+    title = task.get("title") or task.get("description") or "[no title]"
+    print(f"→ [builder_agent] Handling: {title}")
+    builder_logic(task)
+
+
+# Reviewer agent handler
+def handle_reviewer_agent(task):
+    title = task.get("title") or task.get("description") or "[no title]"
+    print(f"→ [reviewer_agent] Handling: {title}")
+    reviewer_logic(task)
 
 from agents.roadmap_agent.roadmap_agent import handle_roadmap_agent as roadmap_logic
 
@@ -38,8 +54,11 @@ def handle_backlog_agent(task):
 def handle_sync_agent(task):
     print(f"→ [sync_agent] Handling: {task['title']}")
 
+from agents.project_manager_agent.project_manager_agent import handle_project_manager_agent as project_manager_logic
+
 def handle_project_manager(task):
-    print(f"→ [project_manager] Handling: {task['title']} (meta or setup task)")
+    print(f"→ [project_manager_agent] Handling: {task['title']}")
+    project_manager_logic(task)
 
 def handle_genki_engine(task):
     print(f"→ [genki_engine] Executing engine configuration or scheduling logic")
@@ -51,12 +70,16 @@ AGENT_HANDLERS = {
     'backlog_agent': handle_backlog_agent,
     'sync_agent': handle_sync_agent,
     'project_manager': handle_project_manager,
-    'genki_engine': handle_genki_engine
+    'genki_engine': handle_genki_engine,
+    'builder_agent': handle_builder_agent,
+    'project_agent': handle_builder_agent,
+    'reviewer_agent': handle_reviewer_agent,
 }
 
 # Placeholder agent execution logic
 def execute_task(task):
-    print(f"[{task['id']}] Executing: {task['title']} (assigned to: {task['assigned_to']})")
+    title = task.get("title") or task.get("description") or "[no title]"
+    print(f"[{task['id']}] Executing: {title} (assigned to: {task.get('assigned_to', '[unassigned]')})")
     handler = AGENT_HANDLERS.get(task['assigned_to'])
     if handler:
         handler(task)

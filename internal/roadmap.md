@@ -11,7 +11,10 @@ This roadmap outlines the phased development of Kikon-tai as a fully autonomous,
 - [x] Conduct client intake interview
 - [x] Generate `requirements.yaml`
 - [x] Draft this `roadmap.md`
-- [x] Define tone flexibility strategy
+- [x] Create `/internal/` for Kikon-tai’s own roadmap and backlog
+- [x] Move `requirements.yaml` to internal config space
+- [x] Create `/seed/` directory for template-based project scaffolding
+- [x] Add `.gitignore` rules for runtime files (backlog, roadmap, briefs, etc.)
 - [ ] Establish MVP scope
 
 ## Phase 2: Agent Initialization
@@ -37,11 +40,34 @@ This roadmap outlines the phased development of Kikon-tai as a fully autonomous,
 - [ ] Create GitHub-ready repo with README, LICENSE, and usage guide
 - [ ] Prepare short portfolio summary or demo video
 - [ ] Optional: prepare walkthrough scripts or prompt examples
+- [ ] Plan runtime/config separation strategy for packaging (optional)
+- [ ] Determine if `/internal/` and `/seed/` should be retained or externalized
 
 ---
 
 ## Notes
 Kikon-tai emphasizes practical, modular AI infrastructure with clearly defined roles and agent boundaries. Future enhancements may include integration with live scheduling, feedback loops via file watching or calendar triggers, and API-based execution environments.
+
+## Version History
+
+
+### v1.1.0 (In Progress)
+- Enabled auto-bootstrapping of backlog if empty
+- Injected default roadmap task to initiate project loop
+- Updated `roadmap_agent` to write tasks directly into `backlog.yaml`
+- Ensures seamless first-run experience without manual task seeding
+- Hardened engine execution logic to gracefully handle missing 'title' fields in tasks (fallbacks to 'description' or '[no title]')
+- Implemented `builder_agent` for autonomous project scaffolding
+- Refined slug generation for semantic agent naming (e.g., `resume_adapter`)
+- Implemented `reviewer_agent` for code quality inspection
+- Connected `reviewer_agent` to engine via `AGENT_HANDLERS`
+- Added backlog task to trigger reviewer agent for scaffolded agents
+
+### v1.0.0 (Tagged)
+- Initial MVP structure complete
+- Internal roadmap and backlog system established
+- Seed templates and `.gitignore` logic finalized
+- Supports autonomous project scaffolding via agent loop
 
 ## Upcoming File Paths
 

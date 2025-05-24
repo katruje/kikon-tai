@@ -1,3 +1,6 @@
+# Pathing Guidance
+# All agents should use `from utils.pathing import ...` to reference project directories and files.
+# Avoid using relative paths (e.g., ../../data/backlog.yaml).
 # Agent Spec Template
 id: AGENT_ID
 name: agent_name
