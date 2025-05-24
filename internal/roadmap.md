@@ -42,6 +42,16 @@ This roadmap outlines the phased development of Kikon-tai as a fully autonomous,
 - [ ] Optional: prepare walkthrough scripts or prompt examples
 - [ ] Plan runtime/config separation strategy for packaging (optional)
 - [ ] Determine if `/internal/` and `/seed/` should be retained or externalized
+- [ ] Ensure reviewer agent outputs clear build summaries and changelogs to `/logs/`
+
+## Phase 5: Pull Request Automation and Feedback Loop
+- [ ] Enable PR submission to GitHub via `pr_agent`
+- [ ] Ensure agent PRs are clearly tagged as machine-generated
+- [ ] Assign user as reviewer for agent-submitted PRs
+- [ ] Route reviewer feedback into backlog for follow-up
+- [ ] Block PR submission if unresolved reviewer feedback exists
+- [ ] Support auto-approval if no human reviewer is assigned
+- [ ] Update README with revised architecture and PR loop documentation
 
 ---
 
@@ -52,6 +62,9 @@ Kikon-tai emphasizes practical, modular AI infrastructure with clearly defined r
 
 
 ### v1.2.0 (In Progress)
+- Added `pr_agent` to submit branches and open PRs
+- Validated full loop from builder to reviewer to PR submission
+- Documented future feedback routing and review gating logic in roadmap
 
 ### v1.1.0 (Tagged)
 - Enabled auto-bootstrapping of backlog if empty

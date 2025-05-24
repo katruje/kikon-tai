@@ -57,8 +57,68 @@ Kikon-tai is an autonomous, full-service design and development organization. It
 
 It is intended as both a usable infrastructure and a demonstration project for job applications. While capable of expressive, emotionally intelligent interaction when enabled, Kikon-tai defaults to a professional tone for external use.
 
+Kikon-tai is:
+- Modular and open source, suitable for both public and internal applications
+- A scaffold for AI-assisted development workflows
+- A blueprint for human-AI collaboration, balancing autonomy and oversight
+- A portfolio project demonstrating applied AI architecture and team orchestration
+
+## 🚀 Quickstart
+
+```bash
+git clone https://github.com/katruje/kikon-tai.git
+cd kikon-tai
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+python -m genki_engine.main_loop
+```
+
+## ✨ Features
+
+- Modular agent-based design
+- Autonomous task execution with human-in-the-loop supervision
+- Dynamic backlog and roadmap generation
+- GitHub PR integration for autonomous project delivery
+- Built-in review and build scaffolding
+
 ---
 
-Kikon-tai is modular, open source, and designed for both internal and public-facing applications. Whether used as a development scaffold or an autonomous design partner, it serves as a blueprint for how AI-led systems can collaborate meaningfully with human creators.
 
-*_Last Updated: May 24, 2025_*
+## 🧠 Agent Architecture
+
+Kikon-tai uses a modular, layered design where each agent is responsible for a distinct function in the autonomous development loop:
+
+- `interviewer_agent`: Conducts structured interviews to gather goals and context from the human user.
+- `roadmap_agent`: Converts client input into a phased roadmap.
+- `backlog_agent`: Breaks down the roadmap into discrete tasks.
+- `sync_agent`: Merges progress from internal and external sources to keep the backlog up to date.
+- `project_manager_agent`: Oversees multi-agent coordination, handles task routing, and ensures overall progress toward delivery goals.
+- `builder_agent`: Generates code or documentation based on tasks.
+- `reviewer_agent`: Analyzes outputs for quality, consistency, and correctness.
+- `pr_agent`: Submits work as GitHub pull requests, optionally tagging the human-in-the-loop for review.
+
+All agents are coordinated by the `genki_engine`, which loops through the backlog and delegates tasks to agents as needed.
+
+```mermaid
+flowchart TD
+    Client[🧑 Client Brief] -->|interview| Interviewer[🎤 interviewer_agent]
+    Interviewer -->|roadmap| Roadmap[🗺️ roadmap_agent]
+    Roadmap -->|tasks| Backlog[📋 backlog_agent]
+    Backlog -->|updates| Sync[🔁 sync_agent]
+    Backlog -->|assign task| PM[📌 project_manager_agent]
+    PM -->|code/doc| Builder[🛠️ builder_agent]
+    Builder -->|output| Reviewer[🔍 reviewer_agent]
+    Reviewer -->|submit PR| PR[🚀 pr_agent]
+    Reviewer -->|feedback| Backlog
+    PR -->|GitHub PR| GitHub[(🌐 GitHub)]
+```
+
+## 🛠️ Development Notes
+
+- Add new agents in `agents/[agent_name]/` with a handler in `[agent_name].py`
+- Use `configs/role_configs.yaml` to define behavior and constraints for each role
+- Prompts for each agent live in the `prompts/` directory
+- Use `python -m genki_engine.main_loop` to simulate a full execution cycle
+
+© 2025 James Laframboise. Released under the [MIT License](LICENSE).

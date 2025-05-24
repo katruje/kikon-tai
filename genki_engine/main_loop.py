@@ -1,3 +1,4 @@
+from agents.pr_agent.pr_agent import handle_pr_agent as pr_logic
 """
 Genki Engine – Main Execution Loop for Kikon-tai
 
@@ -63,6 +64,12 @@ def handle_project_manager(task):
 def handle_genki_engine(task):
     print(f"→ [genki_engine] Executing engine configuration or scheduling logic")
 
+# PR agent handler
+def handle_pr_agent(task):
+    title = task.get("title") or task.get("description") or "[no title]"
+    print(f"→ [pr_agent] Handling: {title}")
+    pr_logic(task)
+
 # Dispatch logic
 AGENT_HANDLERS = {
     'interviewer_agent': handle_interviewer_agent,
@@ -74,6 +81,7 @@ AGENT_HANDLERS = {
     'builder_agent': handle_builder_agent,
     'project_agent': handle_builder_agent,
     'reviewer_agent': handle_reviewer_agent,
+    'pr_agent': handle_pr_agent,
 }
 
 # Placeholder agent execution logic

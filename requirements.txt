@@ -1,0 +1,7 @@
+ruamel.yaml         # For YAML parsing and safe round-trip editing
+openai              # OpenAI API integration (if you're using real completions later)
+python-dotenv       # To load .env variables (used by PR agent)
+GitPython           # Git interactions (commit, push)
+PyGithub            # GitHub API interface (create PRs, assign reviewers)
+requests            # Generic HTTP calls, useful for future agents
+ghapi               # For GitHub CLI support (if further integration needed)
