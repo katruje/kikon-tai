@@ -1,7 +1,7 @@
 
 
 """
-sync_agent.py
+status.py
 
 This agent generates a sprint log summarizing project activity. It checks the current
 backlog for completed, in-progress, and pending tasks and writes a dated Markdown log.
@@ -13,8 +13,8 @@ import yaml
 
 LOG_DIR = DATA_DIR / "sprint_log"
 
-def handle_sync_agent(task):
-    print("→ [sync_agent] Generating sprint log from backlog.yaml")
+def handle_status(task):
+    print("→ [status] Generating sprint log from backlog.yaml")
 
     try:
         with open(BACKLOG_PATH, 'r') as file:

@@ -1,5 +1,5 @@
 """
-roadmap_agent.py
+planner.py
 
 This agent reads the client brief and generates a multi-phase roadmap based on the project scope.
 It is designed to be triggered by the Genki Engine when a roadmap needs to be constructed or updated.
@@ -11,8 +11,8 @@ ROOT_DIR = Path(__file__).resolve().parent.parent.parent
 CLIENT_BRIEF_PATH = ROOT_DIR / "client_portal" / "client_brief.md"
 ROADMAP_OUTPUT_PATH = ROOT_DIR / "data" / "roadmap.md"
 
-def handle_roadmap_agent(task):
-    print(f"→ [roadmap_agent] Generating roadmap from {CLIENT_BRIEF_PATH}")
+def handle_planner(task):
+    print(f"→ [planner] Generating roadmap from {CLIENT_BRIEF_PATH}")
 
     try:
         with open(CLIENT_BRIEF_PATH, 'r') as brief_file:
@@ -73,7 +73,7 @@ def handle_roadmap_agent(task):
                 'assigned_to': 'project_agent',
                 'status': 'pending',
                 'priority': 'medium',
-                'source': 'roadmap_agent'
+                'source': 'planner'
             }
             tasks.append(task)
             next_id += 1
@@ -89,4 +89,4 @@ def handle_roadmap_agent(task):
     except Exception as e:
         print(f"❌ Failed to update backlog: {e}")
 
-print("✅ roadmap_agent module loaded")
+print("✅ planner module loaded")

@@ -2,7 +2,7 @@ import os
 import subprocess
 from dotenv import load_dotenv
 
-def handle_pr_agent(task):
+def handle_prreviewer(task):
     load_dotenv()
 
     target_repo_path = os.getenv("TARGET_REPO_PATH", "../career-agent")
@@ -11,11 +11,11 @@ def handle_pr_agent(task):
 
     try:
         branch_name = task.get("branch_name", "auto/pr_update")
-        commit_message = task.get("commit_message", "Automated PR commit by pr_agent")
+        commit_message = task.get("commit_message", "Automated PR commit by prreviewer")
         pr_title = task.get("pr_title", "🤖 Kikon-tai: Automated Pull Request")
         pr_body = task.get("pr_body", (
             "### 🤖 Automated Pull Request by Kikon-tai\n"
-            "- **Agent**: pr_agent\n"
+            "- **Agent**: prreviewer\n"
             "- **Task ID**: Unknown\n"
             "- **Note**: This PR was generated as part of an autonomous build cycle.\n"
             "Please review before merging."

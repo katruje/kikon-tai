@@ -1,14 +1,14 @@
 from pathlib import Path
 from utils.pathing import get_project_dir
 
-def handle_reviewer_agent(task):
+def handle_reviewer(task):
     project_name = "career-agent"  # This can be dynamically derived from task if needed
     project_path = get_project_dir(project_name)
     agents_dir = project_path / "agents"
     logs_dir = project_path / "logs"
     logs_dir.mkdir(exist_ok=True)
 
-    print(f"→ [reviewer_agent] Reviewing project at: {project_path}")
+    print(f"→ [reviewer] Reviewing project at: {project_path}")
 
     if not agents_dir.exists():
         print(f"⚠️ Agents directory not found: {agents_dir}")
