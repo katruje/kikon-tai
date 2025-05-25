@@ -37,35 +37,35 @@ backlog:
   - id: T013
     title: Review scaffolded agents in career-agent project
     phase: Phase 3
-    assigned_to: reviewer_agent
+    assigned_to: reviewer
     priority: medium
     status: pending
 
   - id: T006
     title: Implement interviewer_agent logic
     phase: Phase 2
-    assigned_to: interviewer_agent
+    assigned_to: interview
     priority: high
     status: pending
 
   - id: T007
     title: Implement roadmap_agent logic
     phase: Phase 2
-    assigned_to: roadmap_agent
+    assigned_to: planner
     priority: high
     status: pending
 
   - id: T008
     title: Implement backlog_agent logic
     phase: Phase 2
-    assigned_to: backlog_agent
+    assigned_to: backlog
     priority: high
     status: pending
 
   - id: T009
     title: Implement sync_agent logic
     phase: Phase 2
-    assigned_to: sync_agent
+    assigned_to: status
     priority: high
     status: pending
 
@@ -86,7 +86,7 @@ backlog:
   - id: T012
     title: Plan auto-linking fields in backlog entries (e.g. source, created_at)
     phase: Phase 3
-    assigned_to: backlog_agent
+    assigned_to: backlog
     priority: medium
     status: pending
 

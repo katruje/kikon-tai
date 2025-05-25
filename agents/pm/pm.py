@@ -1,8 +1,8 @@
 from utils.pathing import BACKLOG_PATH
 from ruamel.yaml import YAML
 
-def handle_project_manager_agent(task):
-    print(f"→ [project_manager_agent] Handling: {task['title']}")
+def handle_pm(task):
+    print(f"→ [pm] Handling: {task['title']}")
     
     try:
         yaml = YAML()

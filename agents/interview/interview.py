@@ -1,8 +1,8 @@
 from utils.pathing import CLIENT_PORTAL_DIR
 from pathlib import Path
 
-def handle_interviewer_agent(task):
-    print(f"→ [interviewer_agent] Handling: {task['title']}")
+def handle_interview(task):
+    print(f"→ [interview] Handling: {task['title']}")
     
     brief_path = CLIENT_PORTAL_DIR / "client_brief.md"
 
